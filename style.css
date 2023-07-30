@@ -1,0 +1,187 @@
+/* Taking out the default CSS  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Style the with display of flex
+and giving position of fixed because we want to remain 
+fixed at the top while user scroll, and giving z-index of 100 to 
+it the front
+*/
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: whitesmoke;
+    border-bottom: 3px solid indianred;
+    position: fixed;
+    top: 0%;
+    z-index: 1000;
+}
+
+/* Style the .sticky classname created by JS to change the header 
+background color
+ */
+.sticky {
+    background: indianred;
+}
+
+/* Styled the logo and name*/
+
+header .logo {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Making sure the name is visible enough */
+
+header .logo h2{
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Giving the span tag the primary color */
+header .logo h2 span {
+    color: orangered;
+}
+
+
+.search-input{
+    padding: 1rem;
+    position: relative;
+}
+
+
+input{ 
+    padding: 0.5rem 8rem 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(22, 22, 22, 0.216);  
+}
+input:focus {
+    border: 1px solid rgba(248, 236, 3, 0.882); 
+}
+
+.icon {
+    position: absolute;
+    top: 26%;
+    left: 85%;
+}
+
+h1 span {
+    color: indianred;
+}
+
+.hero {
+    height: 60vh;
+    background: lightblue;
+}
+
+main {
+    margin: 6rem 0 1rem 0;   
+    position: relative;
+    width: 100%;
+
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70vh;
+ 
+}
+
+
+section {
+    background: whitesmoke;
+    height: 80%;
+    width: 20rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+section:hover {
+    height: 81%;
+    width: 20.2rem;
+    background: lightgray;
+    cursor: pointer;
+}
+
+section img {
+    border-radius: 10px;
+    width: 100%;
+    height: 70%;
+}
+
+section img:hover {
+    opacity: 0.8;
+}
+
+p {
+    text-align: center;
+}
+
+/* In case we don't find solution to the show more button 
+that's why i gave it a fixed postion and comment it */
+.show-more {
+    position: fixed;
+    bottom: 5%;
+    left: 50%; 
+    display: none;
+    background: indianred;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.show-more:hover {
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.end-text {
+    text-align: center;
+    width: 100%;
+}
+.error {
+    color: red;
+    margin-top: 15rem;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 12rem 0 1rem 0; 
+    }
+    h1 {
+        text-align: center;
+     }
+
+}
+
+@media only screen and (max-width: 480px){
+
+     header input{ 
+        padding:  0.5rem;
+     }
+     
+}
+
+@media only screen and (max-width: 320px){
+    header input{ 
+        width: 16rem;
+    }
+}
+
